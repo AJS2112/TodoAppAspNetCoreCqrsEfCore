@@ -59,7 +59,9 @@ namespace Todo.Domain.Infra.Repositories
 
         public IEnumerable<TodoItem> GetByPeriod(string user, DateTime date, bool done)
         {
-            return _context.Todos.AsNoTracking().Where(TodoQueries.GetByPeriod(user, date, done));
+            return _context.Todos
+                .AsNoTracking()
+                .Where(TodoQueries.GetByPeriod(user, date, done));
         }
 
         public void Update(TodoItem todo)
