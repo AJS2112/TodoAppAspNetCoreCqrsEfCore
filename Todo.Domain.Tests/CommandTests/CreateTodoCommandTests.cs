@@ -15,6 +15,7 @@ namespace Todo.Domain.Tests.CommandTests
             _invalidCommand.Validate();
             _validCommand.Validate();
         }
+
         [TestMethod]
         [TestCategory("Command")]
         public void Dado_um_comando_invalido()
